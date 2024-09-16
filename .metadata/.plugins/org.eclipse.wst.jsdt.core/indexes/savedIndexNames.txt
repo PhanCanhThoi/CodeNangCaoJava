@@ -1,10 +1,5 @@
-INDEX VERSION 1.4+D:\CODE\JavaNângCao\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1313126545.index
-2447861777.index
-2025353301.index
-130619522.index
-2712650724.index
+INDEX VERSION 1.4+D:\CODE\JavaNangCao\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1972427697.index
+3734061284.index
 1625448666.index
-1601822109.index
-3801341971.index
-3347705323.index
+1313126545.index

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_mxNOEHK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_mxNOEXK3Ee-m5ZvuEW4OFw" bindingContexts="_mxNS5nK3Ee-m5ZvuEW4OFw">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;phantrang.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/phantrang.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/phantrang.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;BangCuuChuong.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;sxkt.jsp&quot; tooltip=&quot;FormSxkt/src/main/webapp/sxkt.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormSxkt/src/main/webapp/sxkt.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;DangKy.jsp&quot; tooltip=&quot;FormDangKy/src/main/webapp/DangKy.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormDangKy/src/main/webapp/DangKy.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.css.core.csssource.source&quot; name=&quot;Style.css&quot; tooltip=&quot;FormDangKy/src/main/webapp/Style.css&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormDangKy/src/main/webapp/Style.css&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.css.core.csssource.source&quot; name=&quot;Style.css&quot; tooltip=&quot;TestWeb/src/main/webapp/WEB-INF/Style.css&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/WEB-INF/Style.css&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;NewFile.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/NewFile.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/NewFile.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;FormDangKy/src/main/webapp/META-INF/MANIFEST.MF&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormDangKy/src/main/webapp/META-INF/MANIFEST.MF&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;NewFile.jsp&quot; tooltip=&quot;Test/src/main/webapp/NewFile.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Test/src/main/webapp/NewFile.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;FormDangky.jsp&quot; tooltip=&quot;FrmDangKy/src/main/webapp/FormDangky.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FrmDangKy/src/main/webapp/FormDangky.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.css.core.csssource.source&quot; name=&quot;Style.css&quot; tooltip=&quot;FrmDangKy/src/main/webapp/Style.css&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FrmDangKy/src/main/webapp/Style.css&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;BangCuuChuong.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;DangKy.jsp&quot; tooltip=&quot;git/JavaNangCao/src/main/webapp/DangKy.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/git/JavaNangCao/src/main/webapp/DangKy.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.wst.server.ui.editor.input.factory&quot; id=&quot;org.eclipse.wst.server.ui.editor&quot; name=&quot;Tomcat v8.0 Server at localhost&quot; tooltip=&quot;Tomcat v8.0 Server at localhost&quot;>&#xD;&#xA;&lt;persistable server-id=&quot;Tomcat v8.0 Server at localhost&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;DangKy.jsp&quot; tooltip=&quot;FormDangKy/DangKy.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormDangKy/DangKy.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;phantrang.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/phantrang.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/phantrang.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;sxkt.jsp&quot; tooltip=&quot;FormSxkt/src/main/webapp/sxkt.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormSxkt/src/main/webapp/sxkt.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;DangKy.jsp&quot; tooltip=&quot;FormDangKy/src/main/webapp/DangKy.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormDangKy/src/main/webapp/DangKy.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.css.core.csssource.source&quot; name=&quot;Style.css&quot; tooltip=&quot;FormDangKy/src/main/webapp/Style.css&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormDangKy/src/main/webapp/Style.css&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.css.core.csssource.source&quot; name=&quot;Style.css&quot; tooltip=&quot;TestWeb/src/main/webapp/WEB-INF/Style.css&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/WEB-INF/Style.css&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;NewFile.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/NewFile.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestWeb/src/main/webapp/NewFile.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;FormDangKy/src/main/webapp/META-INF/MANIFEST.MF&quot;>&#xD;&#xA;&lt;persistable path=&quot;/FormDangKy/src/main/webapp/META-INF/MANIFEST.MF&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;NewFile.jsp&quot; tooltip=&quot;Test/src/main/webapp/NewFile.jsp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Test/src/main/webapp/NewFile.jsp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_mxNOEXK3Ee-m5ZvuEW4OFw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_mxNOEnK3Ee-m5ZvuEW4OFw" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="976" height="1028">
     <persistedState key="coolBarVisible" value="true"/>
@@ -132,7 +132,7 @@
                 <tags>categoryTag:Debug</tags>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_mxNOInK3Ee-m5ZvuEW4OFw" containerData="8000" selectedElement="_mxNOI3K3Ee-m5ZvuEW4OFw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_mxNOInK3Ee-m5ZvuEW4OFw" containerData="8000" selectedElement="_mxNOKXK3Ee-m5ZvuEW4OFw">
               <children xsi:type="basic:PartSashContainer" xmi:id="_mxNOI3K3Ee-m5ZvuEW4OFw" containerData="8000" selectedElement="_mxNOJHK3Ee-m5ZvuEW4OFw" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_mxNOJHK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.editorss" containerData="8000" ref="_mxNQCHK3Ee-m5ZvuEW4OFw">
                   <tags>Maximized</tags>
@@ -154,9 +154,9 @@
                   </children>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_mxNOKXK3Ee-m5ZvuEW4OFw" elementId="bottomRight" visible="false" containerData="2000" selectedElement="_mxNOM3K3Ee-m5ZvuEW4OFw">
-                <tags>Minimized</tags>
+              <children xsi:type="basic:PartStack" xmi:id="_mxNOKXK3Ee-m5ZvuEW4OFw" elementId="bottomRight" containerData="2000" selectedElement="_mxNOK3K3Ee-m5ZvuEW4OFw">
                 <tags>MinimizedByZoom</tags>
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_mxNOKnK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.views.ProblemView" ref="_mxNQHnK3Ee-m5ZvuEW4OFw" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
@@ -258,32 +258,17 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_mxNQCHK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.editorss" selectedElement="_mxNQCXK3Ee-m5ZvuEW4OFw">
-      <children xsi:type="basic:PartStack" xmi:id="_mxNQCXK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_MGlc8HNkEe-so_mo-e--Gg">
+      <children xsi:type="basic:PartStack" xmi:id="_mxNQCXK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_m8Od4HQNEe-e3rvZW8Z0nw">
         <tags>EditorStack</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
-        <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_mxNQCnK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DangKy.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;DangKy.jsp&quot; partName=&quot;DangKy.jsp&quot; title=&quot;DangKy.jsp&quot; tooltip=&quot;FormDangKy/src/main/webapp/DangKy.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/FormDangKy/src/main/webapp/DangKy.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;4186&quot; selectionTopPixel=&quot;1290&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_mxNQEHK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Style.css" iconURI="platform:/plugin/org.eclipse.wst.css.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.css.core.csssource.source&quot; name=&quot;Style.css&quot; partName=&quot;Style.css&quot; title=&quot;Style.css&quot; tooltip=&quot;FormDangKy/src/main/webapp/Style.css&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/FormDangKy/src/main/webapp/Style.css&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1239&quot; selectionTopPixel=&quot;150&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.wst.css.core.csssource.source</tags>
-        </children>
         <children xsi:type="basic:Part" xmi:id="_MGlc8HNkEe-so_mo-e--Gg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Xskt.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;Xskt.jsp&quot; partName=&quot;Xskt.jsp&quot; title=&quot;Xskt.jsp&quot; tooltip=&quot;FormXskt/src/main/webapp/Xskt.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/FormXskt/src/main/webapp/Xskt.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2761&quot; selectionTopPixel=&quot;830&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;Xskt.jsp&quot; partName=&quot;Xskt.jsp&quot; title=&quot;Xskt.jsp&quot; tooltip=&quot;FormXskt/src/main/webapp/Xskt.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/FormXskt/src/main/webapp/Xskt.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;193&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_Leu9UHNlEe-so_mo-e--Gg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="BangCuuChuong.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;BangCuuChuong.jsp&quot; partName=&quot;BangCuuChuong.jsp&quot; title=&quot;BangCuuChuong.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;798&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;BangCuuChuong.jsp&quot; partName=&quot;BangCuuChuong.jsp&quot; title=&quot;BangCuuChuong.jsp&quot; tooltip=&quot;TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/TestWeb/src/main/webapp/BangCuuChuong.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;150&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
@@ -293,6 +278,18 @@
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_m8Od4HQNEe-e3rvZW8Z0nw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="FormDangky.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;FormDangky.jsp&quot; partName=&quot;FormDangky.jsp&quot; title=&quot;FormDangky.jsp&quot; tooltip=&quot;FrmDangKy/src/main/webapp/FormDangky.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/FrmDangKy/src/main/webapp/FormDangky.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;13213&quot; selectionTopPixel=&quot;3220&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_tca0cHQNEe-e3rvZW8Z0nw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Style.css" iconURI="platform:/plugin/org.eclipse.wst.css.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.css.core.csssource.source&quot; name=&quot;Style.css&quot; partName=&quot;Style.css&quot; title=&quot;Style.css&quot; tooltip=&quot;FrmDangKy/src/main/webapp/Style.css&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/FrmDangKy/src/main/webapp/Style.css&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1239&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>org.eclipse.wst.css.core.csssource.source</tags>
         </children>
       </children>
     </sharedElements>
@@ -356,7 +353,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Server</tags>
-      <tags>highlighted</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_mxNQInK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.wst.server.ui.ServersView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -490,7 +488,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mxNQPXK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-Ad8N3N2Ee-PWNDCCyVXgw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_mxWciXK3Ee-m5ZvuEW4OFw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_IFbI0HQNEe-e3rvZW8Z0nw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_mxWciXK3Ee-m5ZvuEW4OFw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mxNQSnK3Ee-m5ZvuEW4OFw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -498,8 +496,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mxNQTHK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-Ad8PXN2Ee-PWNDCCyVXgw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_mxWabnK3Ee-m5ZvuEW4OFw"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-Ad8PnN2Ee-PWNDCCyVXgw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_mxWbFXK3Ee-m5ZvuEW4OFw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_IFcW8HQNEe-e3rvZW8Z0nw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_mxWabnK3Ee-m5ZvuEW4OFw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_IFcW8XQNEe-e3rvZW8Z0nw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_mxWbFXK3Ee-m5ZvuEW4OFw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mxNQUHK3Ee-m5ZvuEW4OFw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -529,7 +527,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mxNQpnK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-Ad8RHN2Ee-PWNDCCyVXgw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_mxWcLHK3Ee-m5ZvuEW4OFw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_IFc-AnQNEe-e3rvZW8Z0nw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_mxWcLHK3Ee-m5ZvuEW4OFw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mxNQs3K3Ee-m5ZvuEW4OFw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -578,7 +576,7 @@
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolControl" xmi:id="_mxNQ2HK3Ee-m5ZvuEW4OFw" elementId="bottomRight(IDEWindow).(org.eclipse.jst.j2ee.J2EEPerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+      <children xsi:type="menu:ToolControl" xmi:id="_mxNQ2HK3Ee-m5ZvuEW4OFw" elementId="bottomRight(IDEWindow).(org.eclipse.jst.j2ee.J2EEPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
@@ -3147,7 +3145,7 @@
   <addons xmi:id="_mxWd-nK3Ee-m5ZvuEW4OFw" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_mxWd-3K3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_mxWd_HK3Ee-m5ZvuEW4OFw" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_9wF94HN2Ee-PWNDCCyVXgw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_H45IsHQNEe-e3rvZW8Z0nw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_mxWd_nK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_mxWd_3K3Ee-m5ZvuEW4OFw" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_mxWeAHK3Ee-m5ZvuEW4OFw" elementId="org.eclipse.wb.core.actions.category" name="WindowBuilder Pro" description="WindowBuilder Pro actions"/>
