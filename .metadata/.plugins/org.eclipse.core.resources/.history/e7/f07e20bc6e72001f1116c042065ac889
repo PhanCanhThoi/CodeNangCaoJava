@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body >
+
+	<div class="header">
+			<span class= header_text>Đăng Kí</span>			
+	</div>
+	<p></p>
+	<p>Đăng kí nhanh qua Facebook </p>
+	<div class="logfb">
+			<img class="imgfb" src="https://phongvu.vn/cong-nghe/wp-content/uploads/2018/08/image001.png" onclick="loginFB();">
+				<span class="arrowtip">&nbsp;</span>
+					<div class="tipmark">
+						<ul>
+							<li>Thưởng ngay
+							 	<span class="cred">50</span> ePoints khi đăng ký mới &amp; 
+							 	<span class="cred">5</span> ePoints cho mỗi lượt chia sẻ Facebook
+							 </li>
+							<li>Tích lũy nhiều ePoints khi Upload tài liệu 
+								<a rel="nofollow" href="https://tailieu.vn/gioi-thieu-diem-epoints.html">&gt;&gt;</a>
+							</li>
+						</ul>
+					</div>
+	</div>
+</body>
+</html>

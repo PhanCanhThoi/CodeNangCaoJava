@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FormSxkt&apos; to &apos;FormXskt&apos;" description="Rename resource &apos;FormSxkt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/FormSxkt" name="FormXskt" stamp="1726406234540" updateReferences="true"/>
+</session>
