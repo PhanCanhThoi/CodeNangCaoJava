@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="temp.Hang"/>
     <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Remove"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="temp.Hang"/>
+    <fullyQualifiedTypeName name="LoaiModal.Loai"/>
+    <fullyQualifiedTypeName name="LoaiModal.LoaiBo"/>
+    <fullyQualifiedTypeName name="javax.websocket.Session"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="SachModal.SachBo"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="SachModal.Sach"/>
+    <fullyQualifiedTypeName name="temp.CgioHang"/>
 </qualifiedTypeNameHistroy>

@@ -1,32 +1,32 @@
 package temp;
-
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+import SachModal.Sach;
 public class CgioHang {
-	 public ArrayList<Hang> ds = new ArrayList<Hang>();
-	
-	public void themHang(String th , int sl , int gia) {
+	 public ArrayList<Hang> ds = new ArrayList<Hang>();	
+	public void themHang(Sach sach , long sl) {
 		int n = ds.size();
 		for( int i = 0 ; i < n ; i ++) {
-			if((ds.get(i).getTenHang().toLowerCase().trim()).equals(th.toLowerCase().trim())) {
-				int slt = ds.get(i).getSoLuong()+sl;
+			if((ds.get(i).getSach().getTenSach().toLowerCase().trim()).equals(sach.getTenSach().toLowerCase().trim())) {
+				long slt = ds.get(i).getSoLuong()+sl;
 				ds.get(i).setSoLuong(slt);
-				int giatemp = ds.get(i).getGia();
-				int tt = slt * giatemp;
+				long giatemp = ds.get(i).getSach().getGia();
+				long tt = giatemp*slt;
 				ds.get(i).setThanhTien(tt);
 				return;
 			}
 		}
-		Hang h = new Hang(th, sl, gia);
+		long tt = sach.getGia()*sl;
+		Hang h = new Hang(sach,sl,tt);
 		ds.add(h);
 	}
-	public void sua(String th , int sl , int gia) {
+	public void sua(String masach , long sl) {
 		int n = ds.size();
 		for(int i = 0 ; i < n ; i++) {
-			if((ds.get(i).getTenHang().toLowerCase().trim()).equals(th.toLowerCase().trim())) {
+			if(masach.equals(ds.get(i).getSach().getMaSach())) {
 				ds.get(i).setSoLuong(sl);
-				ds.get(i).setGia(gia);
-				int thanhtien = sl*gia;
+				long thanhtien = sl*(ds.get(i).getSach().getGia());
 				ds.get(i).setThanhTien(thanhtien);
 				return;
 			}
@@ -35,9 +35,9 @@ public class CgioHang {
 	public void xoa(String th) {
 		int n = ds.size();
 		for(int i = 0 ; i<n ; i ++) {
-			if((th.toLowerCase().trim()).equals(ds.get(i).getTenHang().toLowerCase().trim())) {
+			if(th.equals(ds.get(i).getSach().getMaSach())) {
 				ds.remove(i);
-				break;
+				return;
 			}
 		}
 	}
@@ -45,7 +45,7 @@ public class CgioHang {
 		int n = ds.size();
 		long tong=0;
 		for(int i = 0 ; i < n ; i++) {
-			tong=tong + ds.get(i).getThanhTien();
+			tong += ds.get(i).getThanhTien();
 		}	
 		return tong;
 	}
