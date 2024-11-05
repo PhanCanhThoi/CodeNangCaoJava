@@ -11,9 +11,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import ChiTietHoaDonModal.ChiTietHoaDonBo;
+import ChiTietHoaDonModal.ChiTietHoaDonDao;
+import HoaDonAndChiTietModal.HoaDonAndChiTiet;
+import HoaDonAndChiTietModal.HoaDonAndChiTietBo;
+import HoaDonModal.HoaDon;
+import HoaDonModal.HoaDonBo;
+import KhachHangModal.KhachHang;
+import KhachHangModal.KhachHangBo;
 import SachModal.Sach;
 import SachModal.SachBo;
 import temp.CgioHang;
+import temp.Hang;
 
 /**
  * Servlet implementation class xoaSuaController
@@ -34,14 +43,18 @@ public class xoaSuaController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
 		HttpSession session = request.getSession();
-		
+		HoaDonBo hdBo = new HoaDonBo();
+		ChiTietHoaDonBo cthdBo = new ChiTietHoaDonBo();
+		KhachHangBo khBo = new KhachHangBo();
 		//xoa sach
 		if(request.getParameter("buttonXoa")!=null){
 			String masach = request.getParameter("masach");
 			SachBo sach = new SachBo();
 			ArrayList<Sach> ds = new ArrayList<Sach>();
-			ds = sach.getSach();
+			ds = sach.getAllSach();
 			for(int i = 0 ; i < ds.size() ; i++){
 				if(masach.equals(ds.get(i).getMaSach())){
 					CgioHang gh = new CgioHang();
@@ -50,7 +63,6 @@ public class xoaSuaController extends HttpServlet {
 					session.setAttribute("gh",gh);
 				}
 			}
-			RequestDispatcher rd = request.getRequestDispatcher("DatHang.jsp");
 		}
 		
 		
@@ -61,7 +73,6 @@ public class xoaSuaController extends HttpServlet {
 					CgioHang cgio = new CgioHang();
 					cgio = (CgioHang)session.getAttribute("gh");
 					cgio.sua(msSua,slSua);
-					RequestDispatcher rd = request.getRequestDispatcher("DatHang.jsp");
 				}
 		
 				//Xoa theo từng item
@@ -73,16 +84,35 @@ public class xoaSuaController extends HttpServlet {
 						cgio.xoa(item);
 					}
 					session.setAttribute("gh",cgio);
-					RequestDispatcher rd = request.getRequestDispatcher("DatHang.jsp");
 				}
 				
 				//Xoá tất cả hàng trong giỏ hàng
 				if(request.getParameter("deleteAll")!=null){
 					session.setAttribute("gh", null);
-					RequestDispatcher rd = request.getRequestDispatcher("DatHang.jsp");
 				}
-				
-				
+				//xac nhan dat hang
+				CgioHang ghTemp = (CgioHang)session.getAttribute("gh");
+				ArrayList<KhachHang> dsKh =  khBo.getKhachHang();
+				int makh = 0;
+				for(KhachHang kh : dsKh) {
+					if(session.getAttribute("tendn").equals(kh.getTendn())&&session.getAttribute("mk").equals(kh.getPass())) {
+						makh = kh.getMakh();
+						session.setAttribute("makh", makh);
+					}
+				}
+				if(request.getParameter("xacnhan")!=null) {
+					int mahoadon = hdBo.addHoaDon(makh);
+					for(Hang hang : ghTemp.ds) {
+						cthdBo.addChiTietHoaDon(hang.getSach().getMaSach(),hang.getSoLuong(), mahoadon);
+					}
+					HoaDonAndChiTietBo HdAndCthdBo = new HoaDonAndChiTietBo();
+					ArrayList<HoaDonAndChiTiet> dsHdAndCthd = new ArrayList<HoaDonAndChiTiet>();
+					dsHdAndCthd = HdAndCthdBo.getHoaDonAndChiTiet();
+					session.setAttribute("dsHdAndCthd", dsHdAndCthd);
+					session.setAttribute("gh", null);
+					RequestDispatcher rd = request.getRequestDispatcher("LichSuMuaHang.jsp");
+					rd.forward(request, response);
+				}
 		RequestDispatcher rd = request.getRequestDispatcher("DatHang.jsp");
 		rd.forward(request, response);
 	}

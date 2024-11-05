@@ -78,6 +78,7 @@
                         <strong>Tổng tiền: <%=cgio.tongTien()%></strong>
                     </div>
                     <div class="text-end mb-3">
+                    	<button type="submit" name="xacnhan"  class="btn btn-danger me-2">Xác nhận đặt hàng</button>
                         <button type="submit" name="xoaItem"  class="btn btn-danger me-2">Xóa đã chọn</button>
                         <button type="submit" name="deleteAll" class="btn btn-danger">Xóa tất cả</button>
                     </div>

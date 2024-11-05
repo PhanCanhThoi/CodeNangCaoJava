@@ -12,10 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.websocket.Session;
 
+import KhachHangModal.KhachHangBo;
 import LoaiModal.Loai;
 import LoaiModal.LoaiBo;
 import SachModal.Sach;
 import SachModal.SachBo;
+import SachModal.SachDao;
 
 /**
  * Servlet implementation class trangChuController
@@ -36,33 +38,53 @@ public class trangChuController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		SachBo sach =new SachBo();
+		KhachHangBo kh = new KhachHangBo();
 		//tra ve cac tat ca loai
 		HttpSession session = request.getSession();
 		ArrayList<Loai> dsl = new ArrayList<Loai>();
 		LoaiBo lbo = new LoaiBo();
 		dsl=lbo.getLoai();
-		session.setAttribute("dsl", dsl);		
+		session.setAttribute("dsl", dsl);
 
-		
-		// TRA VE DANH SACH HIEN THI
+		//Pagination 
 		String ml = (String)request.getParameter("ml");
 		String searchsach = request.getParameter("search-sach");
-		SachBo sach =new SachBo();
+		int pageCount = sach.getPageCount();
+		if(ml!=null)
+			pageCount = sach.getPageCountMaloai(ml);
+		if(searchsach!=null)
+			pageCount = sach.getPageCountSearch(searchsach);
+		session.setAttribute("pageCount", pageCount);
+		session.setAttribute("page",1);
+		// TRA VE DANH SACH HIEN THI	
+		session.setAttribute("ml", ml);
+		session.setAttribute("searchsach", searchsach);
 		ArrayList<Sach> listSearch = new ArrayList<Sach>();
 		if(searchsach!=null){
-			listSearch = sach.Tim(searchsach);
+			int x = (int)session.getAttribute("page");
+			listSearch = sach.getSachSearch(x, searchsach);
 		}
 		if(ml!=null){
-			listSearch = sach.timMa(ml);
+			int x = (int)session.getAttribute("page");
+			listSearch = sach.getSachMaloai(x,ml);
 		}
 		if(ml==null && searchsach == null ){
-			listSearch = sach.getSach();
+			listSearch = sach.getSach((int)session.getAttribute("page"));
 		}
-		request.setAttribute("listSearch", listSearch);		
+		session.setAttribute("listSearch", listSearch);		
 		
 		//dang nhap
 		String tendn = request.getParameter("txtTenDn");
 		String mk = request.getParameter("txtMk");
+		if(tendn==null) {
+			tendn = "";
+		}
+		if(mk==null) {
+			mk = "";
+		}
+		boolean checkDn = kh.CheckDangNhap(tendn, mk);
+		session.setAttribute("checkDn", checkDn);
 		session.setAttribute("tendn", tendn);
 		session.setAttribute("mk", mk);
 		RequestDispatcher rd = request.getRequestDispatcher("tc.jsp");

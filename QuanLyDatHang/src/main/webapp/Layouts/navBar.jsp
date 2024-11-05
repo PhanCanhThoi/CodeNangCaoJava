@@ -3,25 +3,33 @@ pageEncoding="UTF-8"%>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="trangChuController.jsp">Trang chủ</a>
+				<a class="navbar-brand" href="trangChuController">Trang chủ</a>
 			</div>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">	
-					<li class="nav-item"><a class="nav-link" href="xacNhanController">Xác nhận đặt hàng</a></li>
-					<li class="nav-item"><a class="nav-link" href="datHangController">Hàng đã mua</a></li>
+					<li class="nav-item"><a class="nav-link" href="trangChuController">Xác nhận đặt hàng</a></li>
+					<li class="nav-item"><a class="nav-link" href="datHangController">Lịch sử mua hàng</a></li>
 				</ul>
 				<ul class="navbar-nav ms-auto">
+				<%if(session.getAttribute("gh")!= null){ %>
+				<li class="nav-item"><a class="nav-link" href="datHangController"><span
+							class="glyphicon glyphicon-log-in"></span>Giỏ hàng <i class="fas fa-shopping-cart"></i></a></li>
+				<%}else {%>
+				<div class="position-relative">
+				    <i class="bi bi-cart fs-3"></i>
+				    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+				        5
+				        <span class="visually-hidden">items in cart</span>
+				    </span>
+				</div>
+				<%} %>
 					<%
+					boolean checkDn =(boolean) session.getAttribute("checkDn");
 					String tendn = (String)session.getAttribute("tendn");
-					if(tendn==null)
-						tendn="";
-					String mk = (String)session.getAttribute("mk");
-					if(mk==null)
-						mk="";
-					if (tendn.equals("abc")&& mk.equals("123")) {
+					if (checkDn) {
 					%>
 					<li class="nav-item"><a class="nav-link" href=""><span class="glyphicon glyphicon-user"></span>
 							xin chao <%=tendn%></a></li>

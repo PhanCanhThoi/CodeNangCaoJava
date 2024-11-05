@@ -40,7 +40,7 @@ public class datHangController extends HttpServlet {
 		//trả về 1 sách
 		if(datmua!=null){
 			SachBo sbo = new SachBo();
-			ArrayList<Sach> ds = sbo.getSach();//ds là tất cả các sách
+			ArrayList<Sach> ds = sbo.getAllSach();//ds là tất cả các sách
 			int n = ds.size();
 			for(int i = 0 ; i < n ; i++){
 				if(datmua.equals(ds.get(i).getMaSach())) {
