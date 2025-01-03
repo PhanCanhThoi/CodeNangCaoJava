@@ -2,7 +2,10 @@ package HoaDonModal;
 
 public class HoaDonBo {
 	HoaDonDao hdDao = new HoaDonDao();
-	public int addHoaDon(int makh) {
+	public long addHoaDon(long makh) {
 		return hdDao.addHoaDon(makh);
+	}
+	public void updateHoaDon(long maHoaDon) {
+		hdDao.UpdateDamuaHoaDon(maHoaDon);
 	}
 }

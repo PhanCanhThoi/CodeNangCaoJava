@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import ChiTietHoaDonModal.ChiTietHoaDon;
 import ChiTietHoaDonModal.ChiTietHoaDonBo;
 import ChiTietHoaDonModal.ChiTietHoaDonDao;
 import HoaDonAndChiTietModal.HoaDonAndChiTiet;
@@ -19,6 +20,8 @@ import HoaDonModal.HoaDon;
 import HoaDonModal.HoaDonBo;
 import KhachHangModal.KhachHang;
 import KhachHangModal.KhachHangBo;
+import LichSuDatHangModal.LichSuDatHang;
+import LichSuDatHangModal.LichSuDatHangBo;
 import SachModal.Sach;
 import SachModal.SachBo;
 import temp.CgioHang;
@@ -78,41 +81,44 @@ public class xoaSuaController extends HttpServlet {
 				//Xoa theo từng item
 				if(request.getParameter("xoaItem")!=null){
 					String[] listItem = request.getParameterValues("checkbox");
-					CgioHang cgio = new CgioHang();
-					cgio = (CgioHang)session.getAttribute("gh");
-					for(String item : listItem){
-						cgio.xoa(item);
-					}
-					session.setAttribute("gh",cgio);
+					if(listItem!=null) {
+						CgioHang cgio = new CgioHang();
+						cgio = (CgioHang)session.getAttribute("gh");
+						for(String item : listItem){
+							cgio.xoa(item);
+						}
+						session.setAttribute("gh",cgio);
+					}					
 				}
 				
 				//Xoá tất cả hàng trong giỏ hàng
 				if(request.getParameter("deleteAll")!=null){
 					session.setAttribute("gh", null);
 				}
+				
 				//xac nhan dat hang
-				CgioHang ghTemp = (CgioHang)session.getAttribute("gh");
+				CgioHang ghTemp = (CgioHang)session.getAttribute("gh");	
 				ArrayList<KhachHang> dsKh =  khBo.getKhachHang();
-				int makh = 0;
+				long makh = 0;
 				for(KhachHang kh : dsKh) {
 					if(session.getAttribute("tendn").equals(kh.getTendn())&&session.getAttribute("mk").equals(kh.getPass())) {
 						makh = kh.getMakh();
-						session.setAttribute("makh", makh);
+						session.setAttribute("makh", makh);//Lấy ra mã khách hàng hiện tại
 					}
-				}
+				}				
 				if(request.getParameter("xacnhan")!=null) {
-					int mahoadon = hdBo.addHoaDon(makh);
+					long mahoadon = hdBo.addHoaDon(makh);
 					for(Hang hang : ghTemp.ds) {
 						cthdBo.addChiTietHoaDon(hang.getSach().getMaSach(),hang.getSoLuong(), mahoadon);
 					}
-					HoaDonAndChiTietBo HdAndCthdBo = new HoaDonAndChiTietBo();
-					ArrayList<HoaDonAndChiTiet> dsHdAndCthd = new ArrayList<HoaDonAndChiTiet>();
-					dsHdAndCthd = HdAndCthdBo.getHoaDonAndChiTiet();
-					session.setAttribute("dsHdAndCthd", dsHdAndCthd);
+					LichSuDatHangBo lsBo = new LichSuDatHangBo();
+					ArrayList<LichSuDatHang> dsLsdh = lsBo.getLichSuDatHangMakh(makh);
+					session.setAttribute("dsLsdh", dsLsdh);
 					session.setAttribute("gh", null);
-					RequestDispatcher rd = request.getRequestDispatcher("LichSuMuaHang.jsp");
-					rd.forward(request, response);
-				}
+					response.sendRedirect("trangChuController");
+					return;
+				}				
+				
 		RequestDispatcher rd = request.getRequestDispatcher("DatHang.jsp");
 		rd.forward(request, response);
 	}

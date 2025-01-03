@@ -5,6 +5,16 @@ public class ChiTietHoaDon {
 	private String MaSach;
 	private long SoLuongMua;
 	private int MaHoaDon;
+	private boolean damua;
+	public boolean isDamua() {
+		return damua;
+	}
+	public void setDamua(boolean damua) {
+		this.damua = damua;
+	}
+	public void setSoLuongMua(long soLuongMua) {
+		SoLuongMua = soLuongMua;
+	}
 	public int getMaChiTietHoaDon() {
 		return MaChiTietHoaDon;
 	}
@@ -29,12 +39,13 @@ public class ChiTietHoaDon {
 	public void setMaHoaDon(int maHoaDon) {
 		MaHoaDon = maHoaDon;
 	}
-	public ChiTietHoaDon(int maChiTietHoaDon, String maSach, long soLuongMua, int maHoaDon) {
+	public ChiTietHoaDon(int maChiTietHoaDon, String maSach, long soLuongMua, int maHoaDon,boolean damua) {
 		super();
 		MaChiTietHoaDon = maChiTietHoaDon;
 		MaSach = maSach;
 		SoLuongMua = soLuongMua;
 		MaHoaDon = maHoaDon;
+		this.damua=damua;
 	}
 	public ChiTietHoaDon() {
 		super();

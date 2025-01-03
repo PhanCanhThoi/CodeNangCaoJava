@@ -34,4 +34,24 @@ public class SachBo {
 		ds = sachDao.getSachSearch(page, search);
 		return ds;
 	}
+	public ArrayList<Sach> getSach20Row(int page){
+		ds = sachDao.getSach20Row(page);
+		return ds;
+	}
+	public ArrayList<Sach> getSachSearch20Row(int page,String search){
+		ds = sachDao.getSachSearch20Row(page,search);
+		return ds;
+	}
+	public void addSach(Sach sach, String soTap) {
+		sachDao.Addsach(sach, soTap);
+	}
+	public Sach get1Sach(String masach) {
+		return sachDao.get1Sach(masach);
+	}
+	public void UpdateSach(Sach sach) {
+		int x = sachDao.updateSach(sach);
+	}
+	public void DeleteSach(String masach) {
+		sachDao.delete(masach);
+	}
 	}

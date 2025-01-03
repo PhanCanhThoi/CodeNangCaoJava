@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import SachModal.Sach;
 public class CgioHang {
-	 public ArrayList<Hang> ds = new ArrayList<Hang>();	
+	public ArrayList<Hang> ds = new ArrayList<Hang>();	
 	public void themHang(Sach sach , long sl) {
 		int n = ds.size();
 		for( int i = 0 ; i < n ; i ++) {

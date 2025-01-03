@@ -25,7 +25,6 @@ import SachModal.SachDao;
 @WebServlet("/trangChuController")
 public class trangChuController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -46,7 +45,6 @@ public class trangChuController extends HttpServlet {
 		LoaiBo lbo = new LoaiBo();
 		dsl=lbo.getLoai();
 		session.setAttribute("dsl", dsl);
-
 		//Pagination 
 		String ml = (String)request.getParameter("ml");
 		String searchsach = request.getParameter("search-sach");
@@ -74,19 +72,6 @@ public class trangChuController extends HttpServlet {
 		}
 		session.setAttribute("listSearch", listSearch);		
 		
-		//dang nhap
-		String tendn = request.getParameter("txtTenDn");
-		String mk = request.getParameter("txtMk");
-		if(tendn==null) {
-			tendn = "";
-		}
-		if(mk==null) {
-			mk = "";
-		}
-		boolean checkDn = kh.CheckDangNhap(tendn, mk);
-		session.setAttribute("checkDn", checkDn);
-		session.setAttribute("tendn", tendn);
-		session.setAttribute("mk", mk);
 		RequestDispatcher rd = request.getRequestDispatcher("tc.jsp");
 		rd.forward(request, response);
 		

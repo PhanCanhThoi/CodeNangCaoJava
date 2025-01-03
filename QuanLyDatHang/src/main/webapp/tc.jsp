@@ -1,4 +1,5 @@
-	<%@page import="temp.CgioHang"%>
+	<%@page import="Controller.DangNhapController"%>
+<%@page import="temp.CgioHang"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="SachModal.Sach"%>
 <%@page import="SachModal.SachBo"%>
@@ -42,7 +43,6 @@
 					n=listSearch.size();
 				for (int i = 0; i < n; i++) {
 				%>
-				
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="card mb-4" style="height: 500px">
@@ -51,7 +51,11 @@
 						<h5 class="card-title text-center"><%=listSearch.get(i).getTenSach()%></h5>
 						<p class="card-text text-center">Giá bán :<%=listSearch.get(i).getGia()%> đồng</p>
 						</div>
-						<form action="datHangController" method="get">
+						<%String action ="datHangController";
+						if(session.getAttribute("checkDn")==null || (boolean)session.getAttribute("checkDn")==false){
+							action = "DangNhapAdminController";
+						}%>
+						<form action="<%=action %>" method="get">
 						<div class="d-flex justify-content-center pb-4">
 							<button type="submit" name="datmua" value="<%=listSearch.get(i).getMaSach()%>">
 						<img src="https://minhkhai.com.vn/store/images/buynow.jpg"></button>
@@ -70,7 +74,7 @@
 						<h5 class="card-title text-center"><%=listSearch.get(i).getTenSach()%></h5>
 						<p class="card-text text-center">Giá bán :<%=listSearch.get(i).getGia()%> đồng</p>
 						</div>
-						<form action="datHangController" method="get">
+						<form action="<%=action %>" method="get">
 						<div class="d-flex justify-content-center pb-4">
 							<button type="submit" name="datmua" value="<%=listSearch.get(i).getMaSach()%>">
 						<img src="https://minhkhai.com.vn/store/images/buynow.jpg"></button>
@@ -92,7 +96,7 @@
 						<h5 class="card-title text-center"><%=listSearch.get(i).getTenSach()%></h5>
 						<p class="card-text text-center">Giá bán :<%=listSearch.get(i).getGia()%> đồng</p>
 						</div>
-						<form action="datHangController" method="get">
+						<form action="<%=action %>" method="get">
 						<div class="d-flex justify-content-center pb-4">
 							<button type="submit" name="datmua" value="<%=listSearch.get(i).getMaSach()%>">
 						<img src="https://minhkhai.com.vn/store/images/buynow.jpg"></button>

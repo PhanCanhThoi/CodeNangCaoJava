@@ -4,11 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Đăng xuất</title>
 </head>
 <body>
 	<%
+	session.setAttribute("checkDn", null);
 	response.sendRedirect("trangChuController");
+
 	%>
 </body>
 </html>

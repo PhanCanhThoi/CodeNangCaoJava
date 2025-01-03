@@ -1,8 +1,6 @@
-package Controller;
-
+package Account;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,25 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import ChiTietHoaDonModal.ChiTietHoaDonBo;
-import HoaDonAndChiTietModal.HoaDonAndChiTiet;
-import HoaDonAndChiTietModal.HoaDonAndChiTietBo;
-import HoaDonModal.HoaDon;
-import HoaDonModal.HoaDonBo;
-import temp.CgioHang;
+import javax.websocket.Session;
 
 /**
- * Servlet implementation class LichSu
+ * Servlet implementation class LogoutController
  */
-@WebServlet("/LichSu")
-public class LichSuDatHangController extends HttpServlet {
+@WebServlet("/LogoutController")
+public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LichSuDatHangController() {
+    public LogoutController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,14 +30,12 @@ public class LichSuDatHangController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		HoaDonAndChiTietBo HdAndCthdBo = new HoaDonAndChiTietBo();
-		ArrayList<HoaDonAndChiTiet> dsHdAndCthd = new ArrayList<HoaDonAndChiTiet>();
-		dsHdAndCthd = HdAndCthdBo.getHoaDonAndChiTiet();
-		session.setAttribute("dsHdAndCthd", dsHdAndCthd);
-		RequestDispatcher rd = request.getRequestDispatcher("LichSuMuaHang.jsp");
-		rd.forward(request, response);
+		session.setAttribute("KhAccount", null);
+		session.setAttribute("AdminAccount", null);
+		response.sendRedirect("TrangChuController");
+		return;
+		
 	}
 
 	/**
