@@ -30,7 +30,7 @@
 <body>
 	<%ArrayList<Phim> dsPhim = (ArrayList<Phim>)session.getAttribute("dsPhim"); %>
 	<%@ include file="Layouts/navbar.jsp" %>
-	    <div >      
+	    <div class="container">      
         <div class="text-center pt-4">
             <h1><%=session.getAttribute("kieuPhim") %></h1>
         </div>
@@ -55,8 +55,6 @@
 	                    <input type="hidden" name="maPhim" value="<%=dsPhim.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhim.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhim.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhim.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                        <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>     
                     </form>
                     	</div>
@@ -80,8 +78,6 @@
 	                    <input type="hidden" name="maPhim" value="<%=dsPhim.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhim.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhim.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhim.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                        <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>     
                     </form>
                     	</div>
@@ -105,8 +101,6 @@
 	                    <input type="hidden" name="maPhim" value="<%=dsPhim.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhim.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhim.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhim.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                        <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>     
                     </form>     
                     	</div>
@@ -115,9 +109,10 @@
                 </div>
             </div>
             <%} %>
+
+<%} %>
       </div>
 <%} %>
 </div>
-<%} %>
 </body>
 </html>

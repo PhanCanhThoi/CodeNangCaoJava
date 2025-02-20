@@ -25,13 +25,17 @@
                 <%KhachHang khDangNhap = (KhachHang)session.getAttribute("KhAccount"); 
                 if(session.getAttribute("KhAccount")==null){
                 %>
+                    <li class="nav-item my-2 mx-2">  
+                        <a href="DangKyController" class="btn btn-info"><i class="fa-regular fa-circle-user "></i> Đăng ký</a>
+                    </li>
                 	<li class="nav-item my-2 mx-2">  
                         <a class="btn btn-info" href="DangNhapController"><i class="fa-regular fa-circle-user "></i> Login</a>
                     </li>
-                    <li class="nav-item my-2 mx-2">  
-                        <button class="btn btn-info"><i class="fa-regular fa-circle-user "></i> Logout</button>
-                    </li>
+
                 <%}else{ %>
+                	<li class="nav-item my-2 mx-2">  
+                        <a href="LichSuDatVeController" class="btn btn-info">Xem Lịch Sử Đặt Vé</a>
+                    </li>
                 	<li class="nav-item my-2 mx-2">  
                         <a class="btn btn-info" ><%=khDangNhap.getTenDangNhap() %></a>
                     </li>

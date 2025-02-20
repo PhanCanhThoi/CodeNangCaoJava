@@ -29,7 +29,6 @@ public class ChonGheController extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -41,20 +40,21 @@ public class ChonGheController extends HttpServlet {
 			String gioChieu = request.getParameter("btnGioChieu");
 			int maLichChieu = 0;
 			int maPhong=0;
-			ArrayList<LichChieu> dsLichChieu = (ArrayList<LichChieu>)session.getAttribute("dsLichChieu");
+			ArrayList<LichChieu> dsLichChieu =(ArrayList<LichChieu>)session.getAttribute("dsLichChieu");
 			for(LichChieu lc:dsLichChieu) {
 				if(gioChieu.equals(lc.getGioChieu())) {
-					session.setAttribute("LichChieu", lc);
+					session.setAttribute("LichChieu",lc);
 					maLichChieu = lc.getMaLichChieu();
 					maPhong = lc.getMaPhongChieu();
-					System.out.println(maLichChieu);
-					System.out.println(maPhong);
 					break;
 				}		
 			}
 			dsGhe = gheBo.getGhe(maLichChieu, maPhong);
 			session.setAttribute("dsShowGhe", dsGhe);
 		}
+		LichChieu lc = (LichChieu)session.getAttribute("LichChieu");
+		dsGhe = gheBo.getGhe(lc.getMaLichChieu(), lc.getMaPhongChieu());
+		session.setAttribute("dsShowGhe", dsGhe);
 		RequestDispatcher rd = request.getRequestDispatcher("Seat.jsp");
 		rd.forward(request, response);
 	}

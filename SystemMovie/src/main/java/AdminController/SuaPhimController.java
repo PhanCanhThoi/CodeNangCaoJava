@@ -46,6 +46,7 @@ public class SuaPhimController extends HttpServlet {
 		 ServletFileUpload upload = new ServletFileUpload(fileItemFactory);
 		 String TenPhim="", DaoDien="", DienVien ="", ThoiLuong = "",MoTa="",Poster="",Trailer = "" , NgonNgu = "";
 		 int MaTheLoai = 0,MaPhim=0; Date NgayPhatHanh = null;
+		 String oldPosster = "";
 		try {
 			List<FileItem> fileItems = upload.parseRequest(request);
 			for (FileItem fileItem : fileItems) {
@@ -70,28 +71,29 @@ public class SuaPhimController extends HttpServlet {
 					 }
 				 }else//Neu la control
 				 	{
-					 System.out.println("hello");
 					 String tentk=fileItem.getFieldName();
+					 	if(tentk.equals("oldPoster"))
+					 		oldPosster = fileItem.getString("UTF-8");
 						if(tentk.equals("TenPhim"))
-							TenPhim = fileItem.getString();
+							TenPhim = fileItem.getString("UTF-8");
 						if(tentk.equals("DaoDien"))
-							DaoDien = fileItem.getString();
+							DaoDien = fileItem.getString("UTF-8");
 						if(tentk.equals("DienVien"))
-							DienVien = fileItem.getString();
+							DienVien = fileItem.getString("UTF-8");
 						if(tentk.equals("ThoiLuong"))
-							ThoiLuong = fileItem.getString();
+							ThoiLuong = fileItem.getString("UTF-8");
 						if(tentk.equals("MoTa"))
-							MoTa = fileItem.getString();
+							MoTa = fileItem.getString("UTF-8");
 						if(tentk.equals("Trailer"))
-							Trailer = fileItem.getString();
+							Trailer = fileItem.getString("UTF-8");
 						if(tentk.equals("NgonNgu"))
-							NgonNgu  = fileItem.getString();
+							NgonNgu  = fileItem.getString("UTF-8");
 						if(tentk.equals("MaLoai"))
-							MaTheLoai  = Integer.parseInt(fileItem.getString());
+							MaTheLoai  = Integer.parseInt(fileItem.getString("UTF-8"));
 						if(tentk.equals("maPhim"))
-							MaPhim  = Integer.parseInt(fileItem.getString());
+							MaPhim  = Integer.parseInt(fileItem.getString("UTF-8"));
 						if(tentk.equals("selectedDate")) {
-							String dateString = fileItem.getString();
+							String dateString = fileItem.getString("UTF-8");
 						    if (!dateString.isEmpty()) {
 						        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 						        try {
@@ -108,6 +110,12 @@ public class SuaPhimController extends HttpServlet {
 			}catch (Exception e) {
 			e.printStackTrace();
 		}	
+		System.out.println(oldPosster);
+		System.out.println("ảnh mới "+Poster);
+		if(Poster.equals("images/")) {
+			System.out.println("helloưoedd");
+			Poster = oldPosster;
+		}
 		Phim phim = new Phim(MaPhim, TenPhim, MaTheLoai, DaoDien, DienVien, NgayPhatHanh, ThoiLuong, MoTa, Poster, Trailer, NgonNgu);
 		PhimBo phimBo = new PhimBo();
 		phimBo.UpdatePhim(phim);

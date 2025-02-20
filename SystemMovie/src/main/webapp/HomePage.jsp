@@ -44,8 +44,11 @@
             <h1>PHIM ĐANG CHIẾU</h1>
         </div>
         <!--Card-->
-        <%int n = dsPhimDangPhat.size();
-        for(int i = 0 ; i < n ; i++ ){%>
+        <%int n = dsPhimDangPhat.size();%>
+       <%if(n==0){ %>
+       <h3 class="text-center mt-4 mb-4 text-danger">Không có phim đang chiếu</h3>
+       <%}else{ %>
+       <%for(int i = 0 ; i < n ; i++ ){%>
         <div class="row mt-4">
             <div class="col-4">
                 <div class="row">
@@ -60,8 +63,6 @@
 	                    <input type="hidden" name="maPhim" value="<%=dsPhimDangPhat.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhimDangPhat.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhimDangPhat.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhimDangPhat.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                        <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>     
                     	</form>
                     	</div>
@@ -85,8 +86,6 @@
 	                    <input type="hidden" name="maPhim" value="<%=dsPhimDangPhat.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhimDangPhat.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhimDangPhat.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhimDangPhat.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                        <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>     
                     </form>
                     	</div>
@@ -110,8 +109,6 @@
 	                    <input type="hidden" name="maPhim" value="<%=dsPhimDangPhat.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhimDangPhat.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhimDangPhat.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhimDangPhat.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                        <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>     
                     </form>     
                     	</div>
@@ -123,6 +120,7 @@
       </div>
 <%} %>
 </div>
+       <%} %>
       <!-- phân trang -->
       <%
       int CountPhimDangChieu = (int)session.getAttribute("pageCountPhimDangChieu"); 
@@ -151,7 +149,7 @@
         </div>
         </form>
     <!-- PHIM SẮP CHIẾU -->
-    <div class="mb-4">      
+    <div class="container mb-4">      
         <div class="text-center mt-4">
             <h1>PHIM SẮP CHIẾU</h1>
         </div>
@@ -179,8 +177,6 @@
 	                      <input type="hidden" name="maPhim" value="<%=dsPhimSapPhat.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhimSapPhat.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhimSapPhat.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhimSapPhat.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                      <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>
 	                      </form>      
                     	</div>
@@ -203,8 +199,6 @@
 	                      <input type="hidden" name="maPhim" value="<%=dsPhimSapPhat.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhimSapPhat.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhimSapPhat.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhimSapPhat.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                      <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>
 	                      </form>       
                     	</div>
@@ -228,8 +222,6 @@
 	                      <input type="hidden" name="maPhim" value="<%=dsPhimSapPhat.get(i).getMaPhim()%>">
 	                      <h4 class="card-title"><%=dsPhimSapPhat.get(i).getTenPhim() %></h4>
 	                      <p class="card-text">Khởi chiếu: <%=dsPhimSapPhat.get(i).getNgayPhatHanh()%></p>
-	                      <a class="btn btn-outline-light text-dark" class="px-4" href="<%=dsPhimSapPhat.get(i).getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
 	                      <button class="btn btn-primary px-4" name="btnXemChiTiet">Xem chi tiết</button>
 	                      </form>         
                     	</div>
@@ -269,50 +261,6 @@
       <div class="text-center mb-4"><button class="btn btn-warning" name="btnShowPhimSapChieu">Xem tất cả</button>
         </div>
       </form>
-    <!--FOOTER  -->
-
-
-     <!--   The Modal 
-    <div class="modal " id="myModal">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-
-             Modal Header 
-            <div class="modal-header text-white" style="background-color: #343a40;">
-              <h4 class="modal-title">Chọn Rạp Muốn Đặt</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-      
-             Modal body 
-            <div class="modal-bod" style="background-color: #f8f9fa;">
-                <div class="row my-4">
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link ">Thừa Thiên Huế</button></div>
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                    <div class="col-4 text-center d-grid gap-3 btn "><button class="nav-link">Thừa Thiên Huế</button></div>
-                </div>
-            </div>
-      
-             Modal footer 
-            <div class="modal-footer" style="background-color: #343a40;">
-              <button type="button" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
-            </div>
-
-          </div>
-        </div>
- </div> đóng modal 
-       -->
-
-
 
 </body>
 </html>

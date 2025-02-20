@@ -46,14 +46,15 @@ public class ShowPhimController extends HttpServlet {
 		HttpSession session = request.getSession();
 		Phim_TheLoaiBo phim_theLoaiBo = new Phim_TheLoaiBo();
 		if(request.getParameter("btnXemChiTiet")!=null) {
+			session.setAttribute("url", "ShowPhimController");
 			int maPhim = Integer.parseInt(request.getParameter("maPhim"));
+			session.setAttribute("maphim", maPhim);
 			Phim_TheLoai phim_TheLoai = phim_theLoaiBo.get1Phim_TheLoai(maPhim);
 			Date date = phim_TheLoai.getNgayPhatHanh();
 	        SimpleDateFormat sdf = new SimpleDateFormat("EEEE", new Locale("vi", "VN"));
 	        String dayOfWeek = sdf.format(date);
 	        session.setAttribute("dayOfWeek", dayOfWeek);
 			session.setAttribute("phim_theLoai", phim_TheLoai);
-			
 			//get 4 ngày kế tiếp
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 

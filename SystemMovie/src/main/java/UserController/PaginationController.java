@@ -35,13 +35,18 @@ public class PaginationController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		ArrayList<Phim> dsPhimDangChieu = new ArrayList<Phim>();
+		ArrayList<Phim> dsPhimSapChieu = new ArrayList<Phim>();
 		PhimBo phimBo = new PhimBo();
 		if(request.getParameter("btnSearchValue")!=null) {
 			String searchValue = request.getParameter("searchValue");
 			dsPhimDangChieu = phimBo.getPhimDangChieuPagination(1, searchValue);
+			dsPhimSapChieu = phimBo.getPhimSapChieuPagination(1, searchValue);
 			int pagecount = phimBo.getPageCountPhimDangChieu(searchValue);
+			int pagecountSapChieu = phimBo.getPageCountPhimSapChieu(searchValue);
 			session.setAttribute("dsPhimDangChieu", dsPhimDangChieu);
+			session.setAttribute("dsPhimSapChieu", dsPhimSapChieu);
 			session.setAttribute("pageCountPhimDangChieu", pagecount);
+			session.setAttribute("pageCountPhimSapChieu", pagecountSapChieu);	
 		}
 		if(request.getParameter("btnPage")!=null) {
 			int page = Integer.parseInt(request.getParameter("btnPage"));
@@ -51,6 +56,15 @@ public class PaginationController extends HttpServlet {
 			session.setAttribute("dsPhimDangChieu", dsPhimDangChieu);
 			session.setAttribute("pageCountPhimDangChieu", pagecount);
 		}
+		if(request.getParameter("btnPagePhimSapChieu")!=null) {
+			int page = Integer.parseInt(request.getParameter("btnPagePhimSapChieu"));
+			session.setAttribute("pagePhimSapChieu", page);
+			dsPhimSapChieu = phimBo.getPhimSapChieuPagination(page,"");
+			int pagecount = phimBo.getPageCountPhimSapChieu("");
+			session.setAttribute("dsPhimSapChieu", dsPhimSapChieu);
+			session.setAttribute("pageCountPhimSapChieu", pagecount);
+		}
+		
 		RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
 		rd.forward(request, response);
 	}

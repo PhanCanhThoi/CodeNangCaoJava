@@ -45,9 +45,7 @@ public class DangNhapController extends HttpServlet {
 		if(tendn!=null && mk!=null) {
 			DangNhapBo dnBo = new DangNhapBo();
 			String pass = dnBo.HashMatKhau(mk);
-			System.out.println(pass);
 			DangNhap Admin = dnBo.getAdmin_Account(tendn, pass);
-			System.out.println(Admin.getTenDangNhap());
 			if(Admin.getTenDangNhap()!=null) {
 				System.out.println("Đang nhập admin thành công");
 				if((int)session.getAttribute("dem")>=3) {
@@ -74,11 +72,9 @@ public class DangNhapController extends HttpServlet {
 				return;
 				}
 			}else {
-				System.out.println("hêlelo các bnaj");
 				KhachHangBo khbo = new KhachHangBo();
 				KhachHang kh_Account = khbo.getKhachHang_Account(tendn, pass);
-				System.out.println(kh_Account.getTenDangNhap());
-				long makh = khbo.getmakh(tendn, pass);
+				int makh = khbo.getmakh(tendn, pass);
 				if(kh_Account.getTenDangNhap()!=null) {
 					if((int)session.getAttribute("dem")>=3) {
 						Captcha captcha = (Captcha) session.getAttribute(Captcha.NAME);
@@ -86,7 +82,6 @@ public class DangNhapController extends HttpServlet {
 						String answer = request.getParameter("answer");
 						if(captcha.isCorrect(answer)) {
 							session.setAttribute("makh", makh);
-							System.out.println(makh);
 							session.setAttribute("checkDn", (boolean)true);
 							session.setAttribute("KhAccount",kh_Account);
 							response.sendRedirect("TrangChuController");
@@ -103,6 +98,10 @@ public class DangNhapController extends HttpServlet {
 					if((int)session.getAttribute("dem")!=0||session.getAttribute("dem")==null) {
 						session.removeAttribute("dem");
 					}
+					if(session.getAttribute("url")!=null) {
+						response.sendRedirect((String)session.getAttribute("url"));
+						return;
+					}
 					response.sendRedirect("TrangChuController");
 					return;
 					}
@@ -110,8 +109,7 @@ public class DangNhapController extends HttpServlet {
 					int d =(int) session.getAttribute("dem");	
 					d++;session.setAttribute("dem", d);
 					session.setAttribute("tb", "Đăng nhập sai");
-				}
-				
+				}		
 			}
 		}
 		RequestDispatcher rd = request.getRequestDispatcher("DangNhap.jsp");

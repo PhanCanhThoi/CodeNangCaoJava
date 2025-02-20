@@ -20,7 +20,6 @@
             background-color: #0a1929;
             color: white;
         }
-
         .seating-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -148,7 +147,7 @@
                     <%
                     for(int i = 15 ; i < 30 ; i++){ %>
                     	<%if(dsShowGhe.get(i).isTinhtrang()){ %>
-                    		<p class="btn seated"><%=dsShowGhe.get(i).getTenGhe() %></p>
+                    		<button class="seated"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%}else{ %>
                     		<button value="<%=dsShowGhe.get(i).getMaGhe() %>" class="seat" data-seat="<%=dsShowGhe.get(i).getMaGhe()%>"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%} %>
@@ -161,7 +160,7 @@
                     <%
                     for(int i = 30 ; i < 45 ; i++){ %>
                     	<%if(dsShowGhe.get(i).isTinhtrang()){ %>
-                    		<p class="btn btn-danger"><%=dsShowGhe.get(i).getTenGhe() %></p>
+                    		<button class="seated"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%}else{ %>
                     		<button value="<%=dsShowGhe.get(i).getMaGhe() %>" class="seat" data-seat="<%=dsShowGhe.get(i).getMaGhe()%>"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%} %>
@@ -174,7 +173,7 @@
                     <%
                     for(int i = 45 ; i < 60 ; i++){ %>
                     	<%if(dsShowGhe.get(i).isTinhtrang()){ %>
-                    		<p class="btn btn-danger"><%=dsShowGhe.get(i).getTenGhe() %></p>
+                    		<button class="seated"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%}else{ %>
                     		<button value="<%=dsShowGhe.get(i).getMaGhe() %>" class="seat" data-seat="<%=dsShowGhe.get(i).getMaGhe()%>"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%} %>
@@ -187,7 +186,7 @@
                     <%
                     for(int i = 60 ; i < 75 ; i++){ %>
                     	<%if(dsShowGhe.get(i).isTinhtrang()){ %>
-                    		<p class="btn btn-danger"><%=dsShowGhe.get(i).getTenGhe() %></p>
+                    		<button class="seated"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%}else{ %>
                     		<button value="<%=dsShowGhe.get(i).getMaGhe() %>" class="seat" data-seat="<%=dsShowGhe.get(i).getMaGhe()%>"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%} %>
@@ -199,7 +198,7 @@
                     <%
                     for(int i = 75 ; i < 90 ; i++){ %>
                     	<%if(dsShowGhe.get(i).isTinhtrang()){ %>
-                    		<p class="btn btn-danger"><%=dsShowGhe.get(i).getTenGhe() %></p>
+                    		<button class="seated"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%}else{ %>
                     		<button value="<%=dsShowGhe.get(i).getMaGhe() %>" class="seat" data-seat="<%=dsShowGhe.get(i).getMaGhe()%>"><%=dsShowGhe.get(i).getTenGhe() %></button>
                     	<%} %>
@@ -208,6 +207,9 @@
             </div>
         </div>
         <div class="row">
+            <%if(request.getAttribute("error")!=null){ %>
+        		<div class="text-center"><span class="text-danger" style="font-size:18px"><%=request.getAttribute("error") %></span></div>
+        	<%} %>
         	<div class="col d-flex justify-content-end">
 		        <form action="XacNhanDatVeController" method="get">
 		        	<input type="hidden" name="selectedSeats" id="seatInput" value="">
@@ -231,11 +233,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.seat').click(function() {
-                $(this).toggleClass('selected');
-            });
+       // $(document).ready(function() {
+        //    $('.seat').click(function() {
+         //       $(this).toggleClass('selected');
+          //  });
+        //});
+       
+        $(document).ready(function () {
+        const ticketPrice = 45000; // Giá vé cho mỗi ghế
+        const totalDisplay = $('<p class="text-end text-white fs-5">Tổng tiền: <span id="totalPrice">0</span> VND</p>');
+        
+        // Thêm hiển thị tổng tiền vào giao diện
+        $('.seating-container').append(totalDisplay);
+
+        // Xử lý sự kiện khi người dùng click vào ghế
+        $('.seat').click(function () {
+            $(this).toggleClass('selected');
+
+            // Lấy danh sách ghế được chọn
+            const selectedSeats = document.querySelectorAll('.seat.selected');
+            
+            // Tính tổng tiền
+            const totalPrice = selectedSeats.length * ticketPrice;
+
+            // Cập nhật hiển thị tổng tiền
+            $('#totalPrice').text(totalPrice.toLocaleString('vi-VN'));
         });
+    });
+        
         
         document.getElementById('confirm').addEventListener('click', function () {
             // Lấy tất cả các ghế đang chọn

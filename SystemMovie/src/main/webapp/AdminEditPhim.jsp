@@ -2,8 +2,7 @@
 <%@page import="KhachHangModal.KhachHang"%>
 <%@page import="PhimModal.Phim"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -158,7 +157,7 @@
     <%ArrayList<TheLoai> dsTheLoai = (ArrayList<TheLoai>)session.getAttribute("dsTheLoai"); 
      Phim phim = (Phim)request.getAttribute("Phim");
     %>
-    <form action="SuaPhimController" method="post" enctype= "multipart/form-data">
+    <form action="SuaPhimController" method="post" enctype="multipart/form-data" accept-charset="UTF-8">	
       <input type="hidden" name="maPhim" value="<%=phim.getMaPhim()%>">
 		  <div class="mb-3 mt-3">
 		    <label for="" class="form-label">Tên Phim</label>
@@ -194,10 +193,17 @@
                 <input type="" class="form-control" name="ThoiLuong" value="<%=phim.getThoiLuong()%>"/>
             </div>
              <div class="mt-3 mb-3">
-                <label class="form-label">Poster</label>
-                <input type="file" class="form-control" name="anh" id="file" accept="images/*" value="<%=phim.getPoster()%>"/>
-                <img id="preview" alt="Preview ảnh">
-            </div>
+			    <label class="form-label">Poster</label>
+			    <input type="file" class="form-control" name="anh" id="file" accept="images/*">
+			    <!-- Hiển thị ảnh cũ nếu tồn tại -->
+			    <img 
+			        id="preview" 
+			        alt="Preview ảnh" 
+			        src="<%= phim.getPoster() != null ? phim.getPoster() : "" %>" 
+			        style="max-width: 200px; height: auto; margin-top: 10px; border: 1px solid #ccc; display: <%= phim.getPoster() != null ? "block" : "none" %>;">
+			        <input type="hidden" name="oldPoster" id="oldPoster" value="<%= phim.getPoster()%>">
+			</div>
+
  			<div class="mt-3 mb-3">
                 <label class="form-label">Mô tả</label>
                 <input type="text" class="form-control" name="MoTa" value="<%=phim.getMoTa()%>"/>
@@ -247,24 +253,25 @@
         });
         // upload file
         const fileInput = document.getElementById('file');
-        const preview = document.getElementById('preview');
+const preview = document.getElementById('preview');
 
-        fileInput.addEventListener('change', function () {
-            const file = fileInput.files[0]; // Lấy tệp được chọn
-            if (file) {
-                const reader = new FileReader();
+// Lắng nghe sự kiện thay đổi file
+fileInput.addEventListener('change', function () {
+    const file = fileInput.files[0]; // Lấy file người dùng chọn
+    if (file) {
+        const reader = new FileReader();
 
-                // Khi đọc tệp xong, hiển thị ảnh
-                reader.onload = function (e) {
-                    preview.src = e.target.result; // Đường dẫn ảnh
-                    preview.style.display = 'block'; // Hiển thị ảnh
-                };
+        // Khi đọc tệp xong, cập nhật preview
+        reader.onload = function (e) {
+            preview.src = e.target.result; // Cập nhật đường dẫn ảnh mới
+            preview.style.display = 'block'; // Hiển thị ảnh
+        };
 
-                reader.readAsDataURL(file); // Đọc tệp dưới dạng URL
-            } else {
-                preview.style.display = 'none'; // Ẩn nếu không chọn tệp
-            }
-        });
+        reader.readAsDataURL(file); // Đọc file dưới dạng URL
+    } else {
+        preview.style.display = 'none'; // Ẩn preview nếu không có file
+    }
+});
     </script>
 
 </body>

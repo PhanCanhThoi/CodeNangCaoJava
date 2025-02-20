@@ -76,14 +76,10 @@ public class datHangController extends HttpServlet {
 		}
 		session.setAttribute("gh", cgio);
 		
-		
-		
-		
 		//xoa 1 hang
 		RequestDispatcher rd = request.getRequestDispatcher("DatHang.jsp");
 		rd.forward(request, response);
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

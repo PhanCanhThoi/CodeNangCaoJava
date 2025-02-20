@@ -33,7 +33,7 @@ public class TrangChuController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
+	/**	
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,11 +42,10 @@ public class TrangChuController extends HttpServlet {
 		ArrayList<Phim> dsPhimSapPhat = new ArrayList<Phim>();
 		PhimBo phimBo = new PhimBo();
 		TheLoaiBo theloaiBo = new TheLoaiBo();	
-		session.setAttribute("ngaychieu", null);
-	
+		session.setAttribute("ngaychieu", null);	
 		dsPhimDangPhat = phimBo.getPhimDangChieuPagination(1,"");
 		session.setAttribute("dsPhimDangChieu", dsPhimDangPhat);
-		int pageCountPhimDangChieu = phimBo.getPageCountPhimDangChieu("");
+		int pageCountPhimDangChieu = phimBo.getPageCountPhimDangChieu("");	
 		session.setAttribute("pageCountPhimDangChieu", pageCountPhimDangChieu);
 		session.setAttribute("pagePhimDangChieu",1);
 		//Lấy về các thuộc tính phim sắp chiếu
@@ -58,7 +57,6 @@ public class TrangChuController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
 		rd.forward(request, response);	  
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -66,5 +64,4 @@ public class TrangChuController extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
 }

@@ -9,7 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
-	<form action="DangNhapController">
+	<div class="container">
+	<div class="text-center my-5">
+		<h3>Đăng Nhập</h3>
+	</div>
+	<div class="card shadow " style="width: 600px; margin-left: 400px" >
+		<div class="container">
+	<form action="DangNhapController" class="mt-5">
 	  <div class="mb-3 mt-3">
 	    <label for="email" class="form-label">Tên đăng nhập:</label>
 	    <input type="text" class="form-control" id="email" placeholder="Enter tên đăng nhập" name="txtTenDn">
@@ -35,7 +41,8 @@
 	  	    <span class="text-danger"><%=request.getAttribute("CheckDn") %></span></div>
 	 <div class="text-center my-4">
 	  <%} %>
-	  <button type="submit" class="btn btn-primary">Đăng nhập</button></div>
+	  <div class="text-center mb-5">
+	  <button type="submit" class="btn btn-primary">Đăng nhập</button></div></div>
 	<%if(session.getAttribute("dem")!=null &&(int)session.getAttribute("dem")>=3){ %>
 		<center>
 		<img src="simpleCaptcha.jpg" />
@@ -43,6 +50,8 @@
 		<input type="submit" value="Submit"></form>
 		</center>
 	<%} %>
-	</form>
+	</form></div>
+	</div>
+	</div>
 </body>
 </html>

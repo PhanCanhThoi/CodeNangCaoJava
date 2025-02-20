@@ -17,8 +17,8 @@
     <%Phim_TheLoai phim_theLoai = (Phim_TheLoai)session.getAttribute("phim_theLoai");  %>
     <title><%=phim_theLoai.getTenPhim() %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             background-color: #0a1929;
@@ -189,8 +189,9 @@
             </div>
             </div>
             <div class="text-center">
-            <a class="btn btn-outline-secondary text-warning" class="px-4" href="<%=phim_theLoai.getLinkTrailer()%>"><i class="fa fa-play-circle"></i>
-	                        Xem Trailer</a>
+<button type="button" class="btn btn-outline-secondary text-warning" data-bs-toggle="modal" data-bs-target="#trailerModal">
+  <i class="fa fa-play-circle"></i>  Xem Trailer
+</button>
             </div>
             <!-- Lịch chiếu -->
             <%String day1 = (String)session.getAttribute("day1");
@@ -256,8 +257,41 @@
             <form action="ChonGheController">
             <%for(int i = 0 ; i < n ; i++){ %>
             <button type="submit" name="btnGioChieu" class="time-slot" value="<%=dsLichChieu.get(i).getGioChieu()%>"><%=dsLichChieu.get(i).getGioChieu() %></button>
-            <%} %></div>
+            <%} %>
             </form>
+        </div>
     </div>
        <%} %>
     </div>
+    
+<div class="modal fade" id="trailerModal" tabindex="-1" role="dialog" aria-labelledby="trailerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="trailerModalLabel">Trailer Phim</h5>
+                <!-- Sử dụng data-bs-dismiss thay vì data-dismiss -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe id="trailerVideo" width="100%" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> <!-- Đảm bảo đã tải đủ Bootstrap JS -->
+
+<script>
+$('#trailerModal').on('show.bs.modal', function (event) {
+    var trailerUrl = "<%= phim_theLoai.getLinkTrailer() %>";
+    var iframe = $(this).find('#trailerVideo');
+    iframe.attr('src', trailerUrl);
+});
+
+$('#trailerModal').on('hidden.bs.modal', function (event) {
+    var iframe = $(this).find('#trailerVideo');
+    iframe.attr('src', ''); // Dừng video khi đóng modal
+});
+</script>
+</body>

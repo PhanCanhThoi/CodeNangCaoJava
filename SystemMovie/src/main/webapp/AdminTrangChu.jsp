@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bui Le Shop - Sidebar</title>
+    <title>Moon Cinema</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
     <style>
@@ -148,7 +148,7 @@
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <h5 class="card-title">Tổng số phim</h5>
-                    <p class="display-6 text-primary">120</p>
+                    <p class="display-6 text-primary"><%=request.getAttribute("tongPhim") %></p>
                     <i class="bi bi-film text-muted" style="font-size: 2rem;"></i>
                 </div>
             </div>
@@ -157,7 +157,7 @@
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <h5 class="card-title">Rạp đang hoạt động</h5>
-                    <p class="display-6 text-success">15</p>
+                    <p class="display-6 text-success">1</p>
                     <i class="bi bi-building text-muted" style="font-size: 2rem;"></i>
                 </div>
             </div>
@@ -166,7 +166,7 @@
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <h5 class="card-title">Doanh thu tháng</h5>
-                    <p class="display-6 text-warning">500M</p>
+                    <p class="display-6 text-warning"><%=request.getAttribute("ThongKeThang") %></p>
                     <i class="bi bi-cash-stack text-muted" style="font-size: 2rem;"></i>
                 </div>
             </div>
@@ -175,7 +175,7 @@
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <h5 class="card-title">Khách hàng</h5>
-                    <p class="display-6 text-danger">10K</p>
+                    <p class="display-6 text-danger"><%=request.getAttribute("tongKhachHang") %></p>
                     <i class="bi bi-people text-muted" style="font-size: 2rem;"></i>
                 </div>
             </div>
@@ -202,8 +202,8 @@
                     <h5 class="mb-0">Thông báo quan trọng</h5>
                 </div>
                 <div class="card-body">
-                    <p>- Rạp chiếu phim tại TP.HCM đang bảo trì.</p>
-                    <p>- Khuyến mãi 20% vé tháng 12.</p>
+                    <p>- Moon chỉ có 1 rạp chiếu duy nhất ở Huế. Tất cả đều giả mạo</p>
+                    <p>- Khuyến mãi 20% vé tháng 1.</p>
                     <p>- Hệ thống cập nhật ngày 25/12.</p>
                 </div>
             </div>

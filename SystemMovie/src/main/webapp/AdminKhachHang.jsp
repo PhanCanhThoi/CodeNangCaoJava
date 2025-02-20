@@ -187,18 +187,16 @@
             </thead>
             <tbody>
                <%for(int i = 0; i < n ; i++){ %>
-               		<tr>  
-               			<input type="hidden" name="maKH" value="<%=ds.get(i).getMaKhachHang()%>">               
+               		<tr>               
                         <td><%=ds.get(i).getTenKhachHang()%></td>
                         <td><%=ds.get(i).getEmail()%></td>
                         <td><%=ds.get(i).getSoDienThoai()%></td>
                         <td><%=ds.get(i).getDiaChi()%></td>
                         <td><%=ds.get(i).getNgaySinh()%></td>
                         <td class="text-right">
-                        <form action="xoaSuaAdminController" method="get">
-                        <input type="hidden" name="masach" value="">
-                        <button class="btn btn-sm btn-info" name="btnEdit"><i class="fa fa-edit"></i></button>
-                        <button class="btn btn-sm btn-danger" name="btnDelete"><i class="fa fa-trash"></i></i></button>  
+                        <form action="XoaSuaKhachHangController" method="get">
+                        <button class="btn btn-sm btn-info" name="btnEdit" value="<%=ds.get(i).getMaKhachHang()%>"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-sm btn-danger" name="btnDelete" value="<%=ds.get(i).getMaKhachHang()%>"><i class="fa fa-trash"></i></i></button>  
                         </form>                            
                         </td>
                     </tr>     	
